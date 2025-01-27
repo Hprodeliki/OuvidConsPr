@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouvidoria</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="top-left">
+                <a href="#">Acessibilidade</a>
+                <a href="#">Mapa do Site</a>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="logo">
+                <img src="assets/img/logo-horiz.png" alt="Logo COMESP">
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Notícias</a></li>
+                        <li><a href="#">Autoatendimento</a></li>
+                        <li><a href="#">Transparência</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="user-area">
+                <li><a href="login.html">Entrar</a></li>
+            </div>
+        </div>
+    </header>
+    <div class="form-container">
+        <h1>Formulário de Avaliação</h1>
+        <form>
+            <h3 style="display: flex;justify-content: center;padding-left: 3%;">Em uma escala de 0 a 10, quanto você indicaria este serviço de saúde a um amigo ou familiar?</h3>
+            <div class="rating-scale">
+                <p>Nota:</p>
+                <div class="rating-options" name="q1">
+                    <label for="rating-0">
+                        <input type="radio" id="rating-0" name="q1" value="0">
+                        0
+                    </label>
+                    <label for="rating-1">
+                        <input type="radio" id="rating-1" name="q1" value="1">
+                        1
+                    </label>
+                    <label for="rating-2">
+                        <input type="radio" id="rating-2" name="q1" value="2">
+                        2
+                    </label>
+                    <label for="rating-3">
+                        <input type="radio" id="rating-3" name="q1" value="3">
+                        3
+                    </label>
+                    <label for="rating-4">
+                        <input type="radio" id="rating-4" name="q1" value="4">
+                        4
+                    </label>
+                    <label for="rating-5">
+                        <input type="radio" id="rating-5" name="q1" value="5">
+                        5
+                    </label>
+                    <label for="rating-6">
+                        <input type="radio" id="rating-6" name="q1" value="6">
+                        6
+                    </label>
+                    <label for="rating-7">
+                        <input type="radio" id="rating-7" name="q1" value="7">
+                        7
+                    </label>
+                    <label for="rating-8">
+                        <input type="radio" id="rating-8" name="q1" value="8">
+                        8
+                    </label>
+                    <label for="rating-9">
+                        <input type="radio" id="rating-9" name="q1" value="9">
+                        9
+                    </label>
+                    <label for="rating-10">
+                        <input type="radio" id="rating-10" name="q1" value="10">
+                        10
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="form-container">
+        <form>
+            <h2 style="display: flex;justify-content: center;">Qual serviço está sendo avaliado?</h2>
+            <div class="rating-scale">
+                <div class="rating-options" >
+                    <label for="service-ame">
+                        <input type="radio" id="service-ame" name="q2" value="ame">
+                        <h4>Ambulatório Multiprofissional Especializado - AME</h4>
+                    </label>
+                    <br>
+                    <label for="service-specialized">
+                        <input type="radio" id="service-specialized" name="q2" value="specialized">
+                        <h4>Ambulatório Especializado</h4> 
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="form-container">
+        <form>
+            <h2 style="display: flex;justify-content: center;">Qual sua relação com o serviço?</h2>
+            <div class="rating-scale">
+                <div class="rating-options">
+                    <label for="relation-patient">
+                        <input type="radio" id="relation-patient" name="relation" value="patient">
+                        <h4>Paciente</h4>
+                    </label>
+                    <br>
+                    <label for="relation-companion">
+                        <input type="radio" id="relation-companion" name="relation" value="companion">
+                        <h4>Acompanhante</h4>
+                    </label>
+                    <br>
+                    <label for="relation-other-radio">
+                        <input type="radio" id="relation-other-radio" name="relation" value="other">
+                        <h4>Outro</h4>
+                    </label>
+                    <br>
+                    <label for="relation-other" class="relation-other-box" style="display: none;">
+                        <input style="width: 90%;
+                        height: 35px;
+                        padding-left: 5px;
+                        margin-left: 20px;
+                        border: none;
+                        border-bottom: #000 2px solid;
+                        font-size: 17px;"
+                         type="text" id="relation-other" name="relation-other" placeholder="Qual?">
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="form-container">
+            <div class="tabela-profissionais">
+                <h2>1. Como você avalia o acolhimento e atendimento da nossa equipe?</h2>        
+            <form action="#" method="POST">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Profissionais</th>
+                            <th>Muito Satisfeito</th>
+                            <th>Satisfeito</th>
+                            <th>Neutro</th>
+                            <th>Pouco Satisfeito</th>
+                            <th>Não se Aplica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Recepcionista</td>
+                            <td><input type="radio" class="profissionais" name="recepcionista" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="recepcionista" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="recepcionista" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="recepcionista" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="recepcionista" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Enfermeiro</td>
+                            <td><input type="radio" class="profissionais" name="Enfermeiro" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="Enfermeiro" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="Enfermeiro" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="Enfermeiro" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="Enfermeiro" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Técnico de enfermagem</td>
+                            <td><input type="radio" class="profissionais" name="tecnicodeenfermagem" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="tecnicodeenfermagem" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="tecnicodeenfermagem" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="tecnicodeenfermagem" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="tecnicodeenfermagem" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Médico</td>
+                            <td><input type="radio" class="profissionais" name="medico" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="medico" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="medico" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="medico" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="medico" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Dentista</td>
+                            <td><input type="radio" class="profissionais" name="dentista" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="dentista" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="dentista" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="dentista" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="dentista" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Fisioterapeuta</td>
+                            <td><input type="radio" class="profissionais" name="fisioterapeuta" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="fisioterapeuta" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="fisioterapeuta" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="fisioterapeuta" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="fisioterapeuta" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Fonoaudiólogo</td>
+                            <td><input type="radio" class="profissionais" name="fonoaudiologo" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="fonoaudiologo" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="fonoaudiologo" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="fonoaudiologo" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="fonoaudiologo" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Psicólogo</td>
+                            <td><input type="radio" class="profissionais" name="psicologo" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="psicologo" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="psicologo" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="psicologo" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="psicologo" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Assistente Social</td>
+                            <td><input type="radio" class="profissionais" name="assistentesocial" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="assistentesocial" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="assistentesocial" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="assistentesocial" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="assistentesocial" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Terapia Ocupacional</td>
+                            <td><input type="radio" class="profissionais" name="terapiaocupacional" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="terapiaocupacional" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="terapiaocupacional" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="terapiaocupacional" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="terapiaocupacional" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Nutricionista</td>
+                            <td><input type="radio" class="profissionais" name="nutricionista" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="nutricionista" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="nutricionista" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="nutricionista" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="nutricionista" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Farmacêutico</td>
+                            <td><input type="radio" class="profissionais" name="farmaceutico" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="farmaceutico" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="farmaceutico" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="farmaceutico" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="farmaceutico" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Educador Físico</td>
+                            <td><input type="radio" class="profissionais" name="educadorfisico" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="educadorfisico" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="educadorfisico" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="educadorfisico" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="educadorfisico" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                        <tr>
+                            <td>Ponto De Apoio</td>
+                            <td><input type="radio" class="profissionais" name="pontodeapoio" value="Muito Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="pontodeapoio" value="Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="pontodeapoio" value="Neutro" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="pontodeapoio" value="Pouco Satisfeito" onchange="selectCell(this)"></td>
+                            <td><input type="radio" class="profissionais" name="pontodeapoio" value="Não se Aplica" onchange="selectCell(this)"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </form>
+        </div>
+        <div class="form-container">
+            <form action="process_form.php" method="POST">
+                <h2 style="display: flex;justify-content: center;">2.Tempo de espera para ser atendido hoje nessa unidade?</h2>
+                <div class="rating-scale">
+                    <div class="rating-options">
+                        <label for="q3-option1">
+                            <input type="radio" id="q3-option1" name="q3" value="muito-satisfeito">
+                            <h4>Muito Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q3-option2">
+                            <input type="radio" id="q3-option2" name="q3" value="satisfeito">
+                            <h4>Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q3-option3">
+                            <input type="radio" id="q3-option3" name="q3" value="pouco-satisfeito">
+                            <h4>Pouco Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q3-option4">
+                            <input type="radio" id="q3-option4" name="q3" value="insatisfeito">
+                            <h4>Insatisfeito</h4>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="process_form.php" method="POST">
+                <h2 style="display: flex;justify-content: center;padding-left: 5%;">3. Facilidade em realizar agendamento e/ou reagendamento do atendimento/consulta/ exames?</h2>
+                <div class="rating-scale">
+                    <div class="rating-options">
+                        <label for="q4-option1">
+                            <input type="radio" id="q4-option1" name="q4" value="muito-satisfeito">
+                            <h4>Muito Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q4-option2">
+                            <input type="radio" id="q4-option2" name="q4" value="satisfeito">
+                            <h4>Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q4-option3">
+                            <input type="radio" id="q4-option3" name="q4" value="pouco-satisfeito">
+                            <h4>Pouco Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q4-option4">
+                            <input type="radio" id="q4-option4" name="q4" value="insatisfeito">
+                            <h4>Insatisfeito</h4>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="process_form.php" method="POST">
+                <h2 style="display: flex;justify-content: center;">4. Sinalização e identificação dos ambientes?</h2>
+                <div class="rating-scale">
+                    <div class="rating-options">
+                        <label for="q5-option1">
+                            <input type="radio" id="q5-option1" name="q5" value="muito-satisfeito">
+                            <h4>Muito Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q5-option2">
+                            <input type="radio" id="q5-option2" name="q5" value="satisfeito">
+                            <h4>Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q5-option3">
+                            <input type="radio" id="q5-option3" name="q5" value="pouco-satisfeito">
+                            <h4>Pouco Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q5-option4">
+                            <input type="radio" id="q5-option4" name="q5" value="insatisfeito">
+                            <h4>Insatisfeito</h4>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="process_form.php" method="POST">
+                <h2 style="display: flex;justify-content: center;">5. Horário de funcionamento desta unidade?</h2>
+                <div class="rating-scale">
+                    <div class="rating-options">
+                        <label for="q6-option1">
+                            <input type="radio" id="q6-option1" name="q6" value="muito-satisfeito">
+                            <h4>Muito Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q6-option2">
+                            <input type="radio" id="q6-option2" name="q6" value="satisfeito">
+                            <h4>Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q6-option3">
+                            <input type="radio" id="q6-option3" name="q6" value="pouco-satisfeito">
+                            <h4>Pouco Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q6-option4">
+                            <input type="radio" id="q6-option4" name="q6" value="insatisfeito">
+                            <h4>Insatisfeito</h4>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="process_form.php" method="POST">
+                <h2 style="display: flex;justify-content: center;padding-left: 5%;">6. Espaço físico, acessibilidade e acomodação (recepção, consultórios, salas de exames, cadeiras, bebedouros, entre outros??</h2>
+                <div class="rating-scale">
+                    <div class="rating-options">
+                        <label for="q7-option1">
+                            <input type="radio" id="q7-option1" name="q7" value="muito-satisfeito">
+                            <h4>Muito Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q7-option2">
+                            <input type="radio" id="q7-option2" name="q7" value="satisfeito">
+                            <h4>Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q7-option3">
+                            <input type="radio" id="q7-option3" name="q7" value="pouco-satisfeito">
+                            <h4>Pouco Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q7-option4">
+                            <input type="radio" id="q7-option4" name="q7" value="insatisfeito">
+                            <h4>Insatisfeito</h4>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="process_form.php" method="POST">
+                <h2 style="display: flex;justify-content: center;">7. Higiene e limpeza dos ambientes?</h2>
+                <div class="rating-scale">
+                    <div class="rating-options">
+                        <label for="q8-option1">
+                            <input type="radio" id="q8-option1" name="q8" value="muito-satisfeito">
+                            <h4>Muito Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q8-option2">
+                            <input type="radio" id="q8-option2" name="q8" value="satisfeito">
+                            <h4>Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q8-option3">
+                            <input type="radio" id="q8-option3" name="q8" value="pouco-satisfeito">
+                            <h4>Pouco Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q8-option4">
+                            <input type="radio" id="q8-option4" name="q8" value="insatisfeito">
+                            <h4>Insatisfeito</h4>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="process_form.php" method="POST">
+                <h2 style="display: flex;justify-content: center;padding-left: 5%;">8. Como você avalia ser atendido por uma equipe multiprofissional no mesmo dia?</h2>
+                <div class="rating-scale">
+                    <div class="rating-options">
+                        <label for="q9-option1">
+                            <input type="radio" id="q9-option1" name="q9" value="muito-satisfeito">
+                            <h4>Muito Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q9-option2">
+                            <input type="radio" id="q9-option2" name="q9" value="satisfeito">
+                            <h4>Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q9-option3">
+                            <input type="radio" id="q9-option3" name="q9" value="pouco-satisfeito">
+                            <h4>Pouco Satisfeito</h4>
+                        </label>
+                        <br>
+                        <label for="q9-option4">
+                            <input type="radio" id="q9-option4" name="q9" value="insatisfeito">
+                            <h4>Insatisfeito</h4>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="form-container">
+            <div class="pessoal-info">
+                <h2>Identificação(Opcional)</h2>
+                <div class="pessoal-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome">
+                </div>
+                <div class="pessoal-form">
+                    <label for="phone">Telefone:</label>
+                    <input type="text" id="phone" name="phone" placeholder="Digite seu telefone">
+                </div>
+                <div class="pessoal-form">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+                </div>
+            </div>
+    
+            <div class="complement-box">
+                <h2 style="display: flex;justify-content: center;">Sua opinião é muito importante.</h2>
+                <h1 style="display: flex;justify-content: center;">Você tem algo para nos contar?</h2>
+                <textarea id="complement" name="complement" rows="4" placeholder="Registre aqui sua reclamação, elogio ou sugestão:"></textarea>
+            </div>
+        </div>
+
+        <button class="btn-submit" type="submit" >Enviar</button>
+    </div>
+</div>
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>COMESP - Consórcio Metropolitano de Serviços do Paraná</h2>
+            <div class="footer-sections">
+                <div class="section">
+                    <h3>Endereço</h3>
+                    <p>Rua da Paz, 236, Centro<br>Curitiba/PR<br>Cep 80.060-160</p>
+                </div>
+                <div class="section">
+                    <h3>Contato</h3>
+                    <p>Fone: (41) 3154-5010<br>Email: <a href="mailto:consorcio@comespservicos.com.br">consorcio@comespservicos.com.br</a></p>
+                </div>
+                <div class="section">
+                    <h3>Horário</h3>
+                    <p>Segunda-feira a Sexta-feira<br>8:00 às 12:00 - 13:00 às 17:00</p>
+                </div>
+                <div class="section">
+                    <h3>Links Úteis</h3>
+                    <p><a href="#">Governo do Paraná</a><br>
+                       <a href="#">Acispar</a><br>
+                       <a href="#">Associação dos Municípios do Paraná</a></p>
+                </div>
+                <div class="social-media">
+                    <a href="#"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 COMESP | 19/11/2024</p>
+            <p><a href="#">Política de Privacidade</a> | <a href="#">Mapa do Site</a></p>
+        </div>
+        <script>
+            const radios = document.querySelectorAll('.rating-options input[type="radio"]');
+            const labels = document.querySelectorAll('.rating-options label');
+
+            radios.forEach((radio, index) => {
+                radio.addEventListener('change', () => {
+                     labels.forEach((label, labelIndex) => {
+                    label.classList.remove('selected');
+                });
+            labels[index].classList.add('selected');
+        });
+    });
+    function selectCell(radio) {
+        const cells = radio.closest('tr').querySelectorAll('td');
+        cells.forEach(cell => cell.classList.remove('selected'));
+        radio.parentElement.classList.add('selected');
+    }
+    const otherRadio = document.getElementById('relation-other-radio');
+    const otherTextBox = document.querySelector('.relation-other-box');
+
+    document.querySelectorAll('input[name="relation"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+            if (otherRadio.checked) {
+                otherTextBox.style.display = 'block'; 
+            } else {
+                otherTextBox.style.display = 'none'; 
+            }
+        });
+    });
+        </script>
+    </footer>
+    
+</body>
+</html>
